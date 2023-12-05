@@ -8,6 +8,7 @@ class Environment {
 public:
     Environment();
     void define(const std::string& symbol, int value);
+    std::variant<int, std::string> lookup(const std::string& symbol) const;
     int lookup(const std::string& symbol) const;
     bool isDefined(const std::string& symbol) const;
     void insert(const std::string& symbol, int value);
