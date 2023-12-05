@@ -36,6 +36,8 @@ void Environment::insert(const std::string& symbol, int value) {
 throw std::runtime_error("Undefined symbol: " + symbol + " ya esta definido, ademas existe con otro valor")
     }
 std::cout << "El simbolo " << symbol << " ha sido definido correctamente :)" << std::endl;
+}
+} else {
 
 
 }
