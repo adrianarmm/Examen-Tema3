@@ -19,7 +19,7 @@ Environment::Environment() {}
 void Environment::define(const std::string& symbol, const std::variant<int, double, std::string>& value) {
     symbolTable[symbol] = value;
 }
-std::variant<int, std::string> Environment::lookup(const std::string& symbol) const {
+std::variant<int,double,  std::string> Environment::lookup(const std::string& symbol) const {
     auto it = symbolTable.find(symbol);
     if (it == symbolTable.end()) {
         throw std::runtime_error("Undefined symbol: " + symbol);
@@ -37,7 +37,7 @@ int main ()  {
     Environment env;
     env.define("x", 2,);
     env.define("y", 3);
-    env.define("z", Tarta de queso);
+    env.define("z", "Tarta de queso");
 
     try {
         auto    x = env.lookup("x");
