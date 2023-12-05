@@ -12,7 +12,7 @@ public:
     bool isDefined(const std::string& symbol) const;
 
 private:
-    std::map<std::string, std::variant<int, std::string>> symbolTable;
+    std::map<std::string, std::variant<int, double, std::string>> symbolTable;
 };
 
 Environment::Environment() {}
