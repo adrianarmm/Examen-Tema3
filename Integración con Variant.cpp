@@ -56,6 +56,7 @@ int main ()  {
         if (std::holds_alternative<int>(w)) {
             std::cout << "w no esta definis :( " << std::endl;
         }
+    } catch (const std::runtime_error& e) {
     }
 
 
