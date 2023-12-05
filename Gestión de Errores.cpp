@@ -34,7 +34,7 @@ void Environment::insert(const std::string& symbol, int value) {
     auto it = symbolTable.find(symbol);
     if (it!= symbolTable.end()) {
     throw std::runtime_error("Undefined symbol: " + symbol + " ya esta definido, ademas existe con otro valor");;
-    }
+
     } else {
     define(symbol, value);
     std::cout << "El simbolo " << symbol << " ha sido insertado correctamente :)" << std::endl;
@@ -57,4 +57,5 @@ int main () {
         std::cout << "Error: " << e.what() << std::endl;
     }
     return 0;
+
 }
