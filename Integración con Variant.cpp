@@ -14,7 +14,7 @@ public:
     void insert(const std::string& symbol, int value);
 
 private:
-    std::map<std::string, int> symbolTable;
+    std::map<std::string,
 };
 
 Environment::Environment() {}
