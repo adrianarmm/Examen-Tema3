@@ -30,6 +30,9 @@ int Environment::lookup(const std::string& symbol) const {
 bool Environment::isDefined(const std::string& symbol) const {
     return symbolTable.find(symbol) != symbolTable.end();
 }
+void Environment::insert(const std::string& symbol, int value) {
+    symbolTable[symbol] = value;
+}
 int main () {
     Environment env;
     env.insert("x", 2);
