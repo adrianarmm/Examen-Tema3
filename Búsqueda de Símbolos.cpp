@@ -32,7 +32,9 @@ bool Environment::isDefined(const std::string& symbol) const {
 }
 void Environment::insert(const std::string& symbol, int value) {
     if (isDefined(symbol)) {
-
+std::cout << "Warning: El simbolo " << symbol << " esta definido :)" << std::endl;
+    } else {
+        define(symbol, value);
     }
 
 }
