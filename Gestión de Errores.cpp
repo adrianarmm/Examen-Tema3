@@ -56,3 +56,5 @@ int main () {
     } catch (const std::runtime_error& e) {
         std::cout << "Error: " << e.what() << std::endl;
     }
+return 0;
+}
