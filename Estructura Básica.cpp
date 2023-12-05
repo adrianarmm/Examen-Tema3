@@ -13,3 +13,6 @@ private:
 };
 #include <stdexcept>
 Environment::Environment() {}
+void Environment::define(const std::string& symbol, int value) {
+    symbolTable[symbol] = value;
+}
