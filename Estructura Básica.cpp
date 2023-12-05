@@ -1,6 +1,6 @@
 #include <map>
 #include <string>
-
+#include <stdexcept>
 
 class Environment {
 public:
@@ -11,7 +11,7 @@ public:
 private:
     std::map<std::string, int> symbolTable;
 };
-#include <stdexcept>
+
 Environment::Environment() {}
 void Environment::define(const std::string& symbol, int value) {
     symbolTable[symbol] = value;
