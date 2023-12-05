@@ -38,10 +38,9 @@ void Environment::insert(const std::string& symbol, int value)  {
     } else {
     define(symbol, value);
     std::cout << "El simbolo " << symbol << " ha sido insertado correctamente :)" << std::endl;
-
-
 }
-int main () {
+
+int main ()     {
     Environment env;
     env.insert("x", 2);
     env.insert("y", 3);
@@ -55,6 +54,6 @@ int main () {
         std::cout << "w = " << env.lookup("w") << std::endl;
     } catch (const std::runtime_error& e) {
         std::cout << "Error: " << e.what() << std::endl;
-    }
+                }
 return 0;
 }
