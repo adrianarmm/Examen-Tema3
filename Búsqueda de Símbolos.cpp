@@ -31,12 +31,13 @@ bool Environment::isDefined(const std::string& symbol) const {
 }
 int main () {
     Environment env;
-    env.define("x", 2);
-    env.define("y", 3);
-    env.define("z", 4);
+    env.insert("x", 2);
+    env.insert("y", 3);
+    env.insert("z", 4);
 
     std::cout << "x = " << env.lookup("x") << std::endl;
     std::cout << "y = " << env.lookup("y") << std::endl;
     std::cout << "z = " << env.lookup("z") << std::endl;
+
     return 0;
 }
