@@ -54,7 +54,7 @@ int main ()  {
          std::cout << "z = " << std::get<int>(z) << std::endl;
 
         auto w = env.lookup("w");
-            std::cout << "w no esta definis :( " << std::endl;
+            std::cout << "w no esta definida :( " << std::endl;
         }
     } catch (const std::runtime_error& e) {
         std::cout << "Error: " << e.what() << std::endl;
