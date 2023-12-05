@@ -39,6 +39,7 @@ void Environment::insert(const std::string& symbol, int value)  {
     define(symbol, value);
     std::cout << "El simbolo " << symbol << " ha sido insertado correctamente :)" << std::endl;
 }
+}
 
 int main ()  {
     Environment env;
