@@ -37,7 +37,7 @@ bool Environment::isDefined(const std::string& symbol) const {
 
 int main ()  {
     Environment env;
-    env.define("x", 2,);
+    env.define("x", 2);
     env.define("y", 3);
     env.define("z", std::string ("Tarta de queso"));
 
