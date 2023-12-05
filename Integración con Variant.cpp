@@ -28,20 +28,10 @@ std::variant<int, std::string> Environment::lookup(const std::string& symbol) co
 }
 
 
-
 bool Environment::isDefined(const std::string& symbol) const {
     return symbolTable.find(symbol) != symbolTable.end();
 }
-void Environment::insert(const std::string& symbol, int value)  {
-    auto it = symbolTable.find(symbol);
-    if (it!= symbolTable.end()) {
-        throw std::runtime_error("Undefined symbol: " + symbol + " ya esta definido, ademas existe con otro valor");;
 
-    } else {
-        define(symbol, value);
-        std::cout << "El simbolo " << symbol << " ha sido insertado correctamente :)" << std::endl;
-    }
-}
 
 int main ()  {
     Environment env;
