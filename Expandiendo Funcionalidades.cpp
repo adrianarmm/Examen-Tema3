@@ -30,3 +30,8 @@ std::variant<int, double, std::string> Environment::lookup(const std::string& sy
         throw std::runtime_error("Undefined symbol: " + symbol);
     }
     return it->second;
+}
+
+bool Environment::isDefined(const std::string& symbol) const {
+    return symbolTable.find(symbol) != symbolTable.end();
+}
