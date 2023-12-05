@@ -50,3 +50,10 @@ bool Environment::hasType(const std::string& symbol) const {
     }
     return false;
 }
+int main() {
+    Environment env;
+    env.define("x", 2);
+    env.define("y", 3);
+    env.define("z", std::string("Tarta de queso"));
+
+    env.remove("y");
