@@ -1,6 +1,6 @@
 #include <map>
 #include <string>
-
+#include <stdexcept>
 
 class Environment {
 public:
