@@ -1,6 +1,6 @@
 #include <map>
 #include <string>
-#include <stdexcept>
+
 
 class Environment {
 public:
@@ -11,3 +11,5 @@ public:
 private:
     std::map<std::string, int> symbolTable;
 };
+#include <stdexcept>
+Environment::Environment() {}
