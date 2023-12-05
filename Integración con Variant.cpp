@@ -55,9 +55,10 @@ int main ()  {
     std::cout << "z = " << std::get<int>(env.lookup("z")) << std::endl;
 
     try {
-        std::cout << "w = " << env.lookup("w") << std::endl;
+        std::cout << "w = " << std::get<int>(env.lookup("w")) << std::endl;
     } catch (const std::runtime_error& e) {
         std::cout << "Error: " << e.what() << std::endl;
     }
+
     return 0;
 }
