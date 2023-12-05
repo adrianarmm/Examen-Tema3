@@ -5,8 +5,8 @@
 class Environment {
 public:
     Environment();
-    void set(const std::string& symbol, int value);
-    int get(const std::string& symbol) const;
+    void define(const std::string& symbol, int value);
+    int lookup(const std::string& symbol) const;
 
 private:
     std::map<std::string, int> symbolTable;
