@@ -33,7 +33,7 @@ bool Environment::isDefined(const std::string& symbol) const {
 void Environment::insert(const std::string& symbol, int value) {
     auto it = symbolTable.find(symbol);
     if (it!= symbolTable.end()) {
-throw std::runtime_error("Undefined symbol: " + symbol + " ya esta definido, ademas existe con otro valor")
+throw std::runtime_error("Undefined symbol: " + symbol + " ya esta definido, ademas existe con otro valor");;
     }
 std::cout << "El simbolo " << symbol << " ha sido definido correctamente :)" << std::endl;
 }
