@@ -16,7 +16,7 @@ private:
 };
 
 Environment::Environment() {}
-void Environment::define(const std::string& symbol, int value) {
+void Environment::define(const std::string& symbol, const std::variant<int, std::string>& value) {
     symbolTable[symbol] = value;
 }
 std::variant<int, std::string> Environment::lookup(const std::string& symbol) const {
