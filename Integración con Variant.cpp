@@ -2,6 +2,8 @@
 #include <string>
 #include <stdexcept>
 #include <iostream>
+#include <variant>
+
 class Environment {
 public:
     Environment();
