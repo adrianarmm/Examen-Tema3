@@ -16,9 +16,11 @@ private:
 };
 
 Environment::Environment() {}
+
 void Environment::define(const std::string& symbol, const std::variant<int, double, std::string>& value) {
     symbolTable[symbol] = value;
 }
+
 std::variant<int,double,  std::string> Environment::lookup(const std::string& symbol) const {
     auto it = symbolTable.find(symbol);
     if (it == symbolTable.end()) {
@@ -41,18 +43,16 @@ int main ()  {
 
     try {
         auto    x = env.lookup("x");
-        if (std::holds_alternative<int>(x)) {
-            std::cout << "x = " << std::get<int>(x) << std::endl;
-        }
+                std::cout << "x = " << std::get<int>(x) << std::endl;
 
          auto   y = env.lookup("y");
-        if (std::holds_alternative<int>(y)) {
+
             std::cout << "y = " << std::get<int>(y) << std::endl;
-        }
+
          auto   z = env.lookup("z");
-        if (std::holds_alternative<int>(z)) {
-            std::cout << "z = " << std::get<int>(z) << std::endl;
-        }
+
+         std::cout << "z = " << std::get<int>(z) << std::endl;
+
         auto w = env.lookup("w");
         if (std::holds_alternative<int>(w)) {
             std::cout << "w no esta definis :( " << std::endl;
