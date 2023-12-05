@@ -35,3 +35,10 @@ std::variant<int, double, std::string> Environment::lookup(const std::string& sy
 bool Environment::isDefined(const std::string& symbol) const {
     return symbolTable.find(symbol) != symbolTable.end();
 }
+
+void Environment::remove(const std::string& symbol) {
+    auto it = symbolTable.find(symbol);
+    if (it != symbolTable.end()) {
+        symbolTable.erase(it);
+    }
+}
