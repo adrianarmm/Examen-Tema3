@@ -8,6 +8,7 @@ public:
     void define(const std::string& symbol, int value);
     int lookup(const std::string& symbol) const;
     bool isDefined(const std::string& symbol) const;
+    void insert(const std::string& symbol, int value);
 
 private:
     std::map<std::string, int> symbolTable;
@@ -39,5 +40,10 @@ int main () {
     std::cout << "y = " << env.lookup("y") << std::endl;
     std::cout << "z = " << env.lookup("z") << std::endl;
 
+    try {
+        std::cout << "w = " << env.lookup("w") << std::endl;
+    } catch (const std::runtime_error& e) {
+        std::cout << "Error: " << e.what() << std::endl;
+    }
     return 0;
 }
