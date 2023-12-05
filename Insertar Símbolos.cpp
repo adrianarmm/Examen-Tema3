@@ -34,10 +34,11 @@ int main () {
     env.define("x", 2);
     env.define("y", 3);
     env.define("z", 4);
-
+try
     std::cout << "x = " << env.lookup("x") << std::endl;
     std::cout << "y = " << env.lookup("y") << std::endl;
     std::cout << "z = " << env.lookup("z") << std::endl;
+    std::cout << "w = " << env.lookup("w") << std::endl;
     return 0;
 
     try     {
@@ -48,4 +49,5 @@ int main () {
     } catch (const std::runtime_error& e) {
         std::cout << "Error: " << e.what() << std::endl;
     }
+    return 0;
 }
