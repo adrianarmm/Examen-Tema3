@@ -47,11 +47,11 @@ int main ()  {
 
          auto y = env.lookup("y");
 
-            std::cout << "y = " << std::get<int>(y) << std::endl;
+         std::cout << "y = " << std::get<int>(y) << std::endl;
 
          auto   z = env.lookup("z");
 
-         std::cout << "z = " << std::get<int>(z) << std::endl;
+         std::cout << "z = " << std::get<std::string>(z) << std::endl;
 
         auto w = env.lookup("w");
             std::cout << "w no esta definida :( " << std::endl;
