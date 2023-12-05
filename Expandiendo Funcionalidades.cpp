@@ -57,3 +57,5 @@ int main() {
     env.define("z", std::string("Tarta de queso"));
 
     env.remove("y");
+    std::cout << "x es de tipo int: " << std::boolalpha << env.hasType<int>("x") << std::endl;
+    std::cout << "z es de tipo double: " << std::boolalpha << env.hasType<double>("z") << std::endl;
