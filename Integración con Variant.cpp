@@ -44,6 +44,7 @@ int main ()  {
         if (std::holds_alternative<int>(x)) {
             std::cout << "x = " << std::get<int>(x) << std::endl;
         }
+
          auto   y = env.lookup("y");
         if (std::holds_alternative<int>(y)) {
             std::cout << "y = " << std::get<int>(y) << std::endl;
