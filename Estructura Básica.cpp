@@ -7,7 +7,7 @@ public:
     Environment();
     void define(const std::string& symbol, int value);
     int lookup(const std::string& symbol) const;
-
+bool isDefined(const std::string& symbol) const;
 private:
     std::map<std::string, int> symbolTable;
 };
