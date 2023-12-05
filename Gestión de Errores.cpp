@@ -31,6 +31,7 @@ bool Environment::isDefined(const std::string& symbol) const {
     return symbolTable.find(symbol) != symbolTable.end();
 }
 void Environment::insert(const std::string& symbol, int value) {
+    auto it = symbolTable.find(symbol);
     if (isDefined(symbol)) {
         std::cout << "Warning: El simbolo " << symbol << " esta definido :)" << std::endl;
     } else {
