@@ -40,7 +40,7 @@ void Environment::insert(const std::string& symbol, int value)  {
     std::cout << "El simbolo " << symbol << " ha sido insertado correctamente :)" << std::endl;
 }
 
-int main ()     {
+int main ()  {
     Environment env;
     env.insert("x", 2);
     env.insert("y", 3);
