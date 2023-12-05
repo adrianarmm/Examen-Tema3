@@ -42,10 +42,10 @@ int main ()  {
     env.define("z", std::string ("Tarta de queso"));
 
     try {
-        auto    x = env.lookup("x");
+        auto x = env.lookup("x");
                 std::cout << "x = " << std::get<int>(x) << std::endl;
 
-         auto   y = env.lookup("y");
+         auto y = env.lookup("y");
 
             std::cout << "y = " << std::get<int>(y) << std::endl;
 
