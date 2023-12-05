@@ -31,7 +31,9 @@ bool Environment::isDefined(const std::string& symbol) const {
     return symbolTable.find(symbol) != symbolTable.end();
 }
 void Environment::insert(const std::string& symbol, int value) {
-
+    if (isDefined(symbol)) {
+        throw std::runtime_error("Simbolo: " + symbol);
+    }
 
 }
 int main () {
