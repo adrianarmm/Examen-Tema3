@@ -35,14 +35,10 @@ bool Environment::isDefined(const std::string& symbol) const {
 
 int main ()  {
     Environment env;
-    env.define("x", 2);
+    env.define("x", 2,);
     env.define("y", 3);
-    env.define("z", 4);
+    env.define("z", Tarta de queso);
 
-
-    std::cout << "x = " << std::get<int>(env.lookup("x")) << std::endl;
-    std::cout << "y = " << std::get<int>(env.lookup("y")) << std::endl;
-    std::cout << "z = " << std::get<int>(env.lookup("z")) << std::endl;
 
     try {
         std::cout << "w = " << std::get<int>(env.lookup("w")) << std::endl;
