@@ -41,11 +41,6 @@ try     {
     std::cout << "w = " << env.lookup("w") << std::endl;
     return 0;
 
-    try     {
-        std::cout << "x = " << env.lookup("x") << std::endl;
-        std::cout << "y = " << env.lookup("y") << std::endl;
-        std::cout << "z = " << env.lookup("z") << std::endl;
-        std::cout << "w = " << env.lookup("w") << std::endl;
     } catch (const std::runtime_error& e) {
         std::cout << "Error: " << e.what() << std::endl;
     }
