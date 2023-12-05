@@ -37,7 +37,7 @@ int main ()  {
     Environment env;
     env.define("x", 2,);
     env.define("y", 3);
-    env.define("z", std::string ("Tarta de queso");
+    env.define("z", std::string ("Tarta de queso"));
 
     try {
         auto    x = env.lookup("x");
