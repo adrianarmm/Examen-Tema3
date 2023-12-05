@@ -22,3 +22,4 @@ int Environment::lookup(const std::string& symbol) const {
 if (it == symbolTable.end()) {
     throw std::runtime_error("Undefined symbol: " + symbol);
          }
+return it->second;
