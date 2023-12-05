@@ -28,3 +28,14 @@ return it->second;
 bool Environment::isDefined(const std::string& symbol) const {
   return symbolTable.find(symbol) != symbolTable.end();
 }
+int main () {
+  Environment env;
+  env.define("x", 2);
+  env.define("y", 3);
+  env.define("z", 4);
+  std::cout << env.lookup("x") << std::endl;
+  std::cout << env.lookup("y") << std::endl;
+  std::cout << env.lookup("z") << std::endl;
+  std::cout << env.lookup("w") << std::endl;
+  return 0;
+}
