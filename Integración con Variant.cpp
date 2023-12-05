@@ -39,12 +39,14 @@ int main ()  {
     env.define("y", 3);
     env.define("z", Tarta de queso);
 
-
     try {
-        std::cout << "w = " << std::get<int>(env.lookup("w")) << std::endl;
-    } catch (const std::runtime_error& e) {
-        std::cout << "Error: " << e.what() << std::endl;
+        auto    x = env.lookup("x");
+        auto    y = env.lookup("y");
+        auto    z = env.lookup("z");
+        std::cout << "x = " << std::get<int>(x) << std::endl;
+
     }
+
 
     return 0;
 }
