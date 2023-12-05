@@ -57,6 +57,7 @@ int main ()  {
             std::cout << "w no esta definis :( " << std::endl;
         }
     } catch (const std::runtime_error& e) {
+        std::cout << "Error: " << e.what() << std::endl;
     }
 
 
