@@ -50,7 +50,7 @@ int main ()  {
     env.insert("y", 3);
     env.insert("z", 4);
 
-    std::cout << "x = " << env.lookup("x") << std::endl;
+    std::cout << "x = " << std::get<int>(env.lookup("x")) << std::endl;
     std::cout << "y = " << env.lookup("y") << std::endl;
     std::cout << "z = " << env.lookup("z") << std::endl;
 
