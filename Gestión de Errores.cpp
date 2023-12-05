@@ -38,6 +38,8 @@ throw std::runtime_error("Undefined symbol: " + symbol + " ya esta definido, ade
 std::cout << "El simbolo " << symbol << " ha sido definido correctamente :)" << std::endl;
 }
 } else {
+    define(symbol, value);
+    std::cout << "El simbolo " << symbol << " ha sido insertado correctamente :)" << std::endl;
 
 
 }
