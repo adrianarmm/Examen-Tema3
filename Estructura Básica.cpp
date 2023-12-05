@@ -1,6 +1,7 @@
 #include <map>
 #include <string>
-Environment::Environment() {}
+
+
 class Environment {
 public:
     Environment();
