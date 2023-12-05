@@ -23,3 +23,10 @@ Environment::Environment() {}
 void Environment::define(const std::string& symbol, const std::variant<int, double, std::string>& value) {
     symbolTable[symbol] = value;
 }
+
+std::variant<int, double, std::string> Environment::lookup(const std::string& symbol) const {
+    auto it = symbolTable.find(symbol);
+    if (it == symbolTable.end()) {
+        throw std::runtime_error("Undefined symbol: " + symbol);
+    }
+    return it->second;
