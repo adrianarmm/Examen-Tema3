@@ -51,8 +51,11 @@ int main ()  {
          auto   z = env.lookup("z");
         if (std::holds_alternative<int>(z)) {
             std::cout << "z = " << std::get<int>(z) << std::endl;
-
-
+        }
+        auto w = env.lookup("w");
+        if (std::holds_alternative<int>(w)) {
+            std::cout << "w no esta definis :( " << std::endl;
+        }
     }
 
 
