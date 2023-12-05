@@ -13,3 +13,9 @@ public:
     void remove(const std::string& symbol);
     template<typename T>
     bool hasType(const std::string& symbol) const;
+
+private:
+    std::map<std::string, std::variant<int, double, std::string>> symbolTable;
+};
+
+Environment::Environment() {}
