@@ -36,5 +36,9 @@ int main () {
   std::cout << env.lookup("y") << std::endl;
   std::cout << env.lookup("z") << std::endl;
   std::cout << env.lookup("w") << std::endl;
-  return 0;
+  try {
+    std::cout << env.lookup("w") << std::endl;
+  } catch (std::runtime_error& e) {
+    std::cout << e.what() << std::endl;
+  }
 }
