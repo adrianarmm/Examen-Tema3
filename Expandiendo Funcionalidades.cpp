@@ -42,3 +42,11 @@ void Environment::remove(const std::string& symbol) {
         symbolTable.erase(it);
     }
 }
+template<typename T>
+bool Environment::hasType(const std::string& symbol) const {
+    if (isDefined(symbol)) {
+        auto value = symbolTable.at(symbol);
+        return std::holds_alternative<T>(value);
+    }
+    return false;
+}
