@@ -41,9 +41,15 @@ int main ()  {
 
     try {
         auto    x = env.lookup("x");
-        auto    y = env.lookup("y");
-        auto    z = env.lookup("z");
-        std::cout << "x = " << std::get<int>(x) << std::endl;
+        if (std::holds_alternative<int>(x)) {
+            std::cout << "x = " << std::get<int>(x) << std::endl;
+        }
+         auto   y = env.lookup("y");
+        if (std::holds_alternative<int>(y)) {
+            std::cout << "y = " << std::get<int>(y) << std::endl;
+        }
+         auto   z = env.lookup("z");
+
 
     }
 
