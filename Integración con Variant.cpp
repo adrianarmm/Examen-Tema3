@@ -11,7 +11,6 @@ public:
     std::variant<int, std::string> lookup(const std::string& symbol) const;
     bool isDefined(const std::string& symbol) const;
 
-
 private:
     std::map<std::string, std::variant<int, std::string>> symbolTable;
 };
@@ -20,14 +19,15 @@ Environment::Environment() {}
 void Environment::define(const std::string& symbol, int value) {
     symbolTable[symbol] = value;
 }
-
-int Environment::lookup(const std::string& symbol) const {
+std::variant<int, std::string> Environment::lookup(const std::string& symbol) const {
     auto it = symbolTable.find(symbol);
     if (it == symbolTable.end()) {
         throw std::runtime_error("Undefined symbol: " + symbol);
     }
     return it->second;
 }
+
+
 
 bool Environment::isDefined(const std::string& symbol) const {
     return symbolTable.find(symbol) != symbolTable.end();
